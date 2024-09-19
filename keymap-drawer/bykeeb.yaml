@@ -1,3 +1,4 @@
+layout: {zmk_keyboard: bykeeb}
 layers:
   default:
   - Q
@@ -112,20 +113,20 @@ layers:
   - {t: ▽, type: trans}
   func:
   - Boot
-  - Sft+ Page Up
-  - Sft+ ↑
-  - Sft+ Page Down
+  - Sft+Page Up
+  - Sft+↑
+  - Sft+Page Down
   - {t: ▽, type: trans}
   - PLAY PAUSE
   - F7
   - F8
   - F9
   - F10
-  - Sft+ Home
-  - Sft+ ←
-  - Sft+ ↓
-  - Sft+ →
-  - Sft+ End
+  - Sft+Home
+  - Sft+←
+  - Sft+↓
+  - Sft+→
+  - Sft+End
   - VOL UP
   - F4
   - F5
@@ -260,4 +261,4 @@ layers:
   - {t: ▽, type: trans}
 combos:
 - p: [20, 21]
-  k: Ctl+ Z
+  k: Ctl+Z
