@@ -1,216 +1,135 @@
 layout: {zmk_keyboard: bykeeb}
 layers:
-  default:
-  - Q
-  - W
-  - E
-  - R
-  - {t: T, h: numlft}
-  - {t: Y, h: numrht}
-  - U
-  - I
-  - O
-  - P
-  - {t: A, h: LCTL}
-  - {t: S, h: Gui}
-  - {t: D, h: Alt}
-  - {t: F, h: LSHIFT}
-  - G
-  - H
-  - {t: J, h: RSHIFT}
-  - {t: K, h: Alt}
-  - {t: L, h: Gui}
-  - {t: ;, h: RCTL}
+  '0':
+  - Y
   - Z
-  - X
-  - C
-  - V
+  - U
+  - A
+  - Q
+  - P
   - B
-  - N
   - M
+  - L
+  - F
+  - C
+  - {t: S, h: Alt}
+  - {t: I, h: Shift}
+  - {t: E, h: LEFT CONTROL}
+  - O
+  - D
+  - {t: T, h: Ctrl}
+  - {t: N, h: Shift}
+  - {t: R, h: Alt}
+  - {t: H, h: RWIN}
+  - V
+  - X
+  - '['
+  - ''''
+  - ;
+  - W
+  - G
   - ','
   - .
-  - /
-  - ⌦
-  - {t: ⏎, h: nav}
-  - {t: ↹, h: func}
-  - {t: ⌫, h: media}
-  - {t: ␣, h: sym}
-  - ''''
-  nav:
-  - Esc
-  - Page Up
-  - ↑
-  - Page Down
+  - K
+  - Home
+  - ⏎
+  - {t: ␣, h: nav_numbers}
+  - {t: ␣, h: symbols}
+  - {t: BACKSPACE, h: fn_specials}
+  - End
+  symbols:
   - {t: ▽, type: trans}
-  - '*'
+  - /
+  - Alt+5
+  - Alt+6
+  - Sft+Alt+6
+  - Sft+1
+  - '`'
+  - Sft+`
+  - Sft+0
+  - Sft+6
+  - Sft+Alt+7
+  - Sft+7
+  - Alt+8
+  - Alt+9
+  - Sft+]
+  - Sft+-
+  - Sft+8
+  - Sft+9
+  - /
+  - Sft+.
+  - \
+  - Sft+4
+  - Alt+7
+  - Alt+N
+  - Sft+=
+  - ']'
+  - Sft+5
+  - Sft+2
+  - Sft+\
+  - Sft+,
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - ↹
+  nav_numbers:
+  - Page Up
+  - ⌫
+  - ↑
+  - ⌦
+  - Page Down
+  - /
   - '7'
   - '8'
   - '9'
-  - '-'
+  - Sft+]
   - Home
   - ←
   - ↓
   - →
   - End
-  - /
+  - Alt+E
   - '4'
   - '5'
   - '6'
-  - +
+  - ']'
+  - Esc
+  - ↹
+  - Insert
+  - ⏎
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '='
+  - Sft+.
   - '1'
   - '2'
   - '3'
+  - ','
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
   - '0'
-  - {t: ▽, type: trans}
-  - {type: held}
-  - ↹
   - ⌫
-  - ␣
-  - .
-  sym:
-  - '!'
-  - '@'
-  - '#'
-  - $
-  - '%'
-  - ^
-  - '&'
-  - '*'
-  - _
-  - '='
-  - '-'
-  - '['
-  - '{'
-  - (
-  - <
-  - '>'
-  - )
-  - '}'
-  - ']'
-  - +
-  - Caps Lock
-  - '`'
-  - Tab Left
-  - Desk Left
-  - Caps Word
   - {t: ▽, type: trans}
-  - Desk Right
-  - Tab Right
-  - {t: ▽, type: trans}
-  - \
-  - {t: ▽, type: trans}
-  - ⏎
-  - ⌦
-  - ⌫
-  - {type: held}
-  - {t: ▽, type: trans}
-  func:
-  - Boot
-  - Sft+Page Up
-  - Sft+↑
-  - Sft+Page Down
-  - {t: ▽, type: trans}
-  - PLAY PAUSE
-  - F7
-  - F8
-  - F9
-  - F10
-  - Sft+Home
-  - Sft+←
-  - Sft+↓
-  - Sft+→
-  - Sft+End
-  - VOL UP
-  - F4
-  - F5
-  - F6
-  - F11
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - MUTE
-  - VOL DN
+  fn_specials:
   - F1
   - F2
   - F3
+  - F4
+  - F5
+  - F8
+  - F9
+  - F10
+  - F11
   - F12
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {type: held}
-  - {t: ▽, type: trans}
-  - ␣
-  - {t: ▽, type: trans}
-  media:
+  - F6
+  - F7
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - BT PRV
-  - BT NXT
-  - Reset
-  - Boot
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - BT CLR
-  - BT 1
-  - BT 2
-  - BT 3
-  - BT 4
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - EP TOG
-  - EP ON
-  - EP OFF
-  - Out USB
-  - Out BLE
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  numlft:
-  - Middle Click
-  - '7'
-  - '8'
-  - '9'
-  - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - Left Click
-  - '4'
-  - '5'
-  - '6'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - Right Click
-  - '1'
-  - '2'
-  - '3'
-  - '0'
+  - '&mark_word'
+  - '&mark_line'
+  - PRINTSCREEN
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -218,47 +137,14 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - '&email'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  numrht:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
-  - '7'
-  - '8'
-  - '9'
-  - '-'
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '4'
-  - '5'
-  - '6'
-  - +
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '1'
-  - '2'
-  - '3'
-  - '0'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-combos:
-- p: [20, 21]
-  k: Ctl+Z
