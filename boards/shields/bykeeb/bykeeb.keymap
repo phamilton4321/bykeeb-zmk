@@ -128,7 +128,7 @@
 // |      |      |       |      |      |   |  email  |          |              |      |       |
 //             |  |  |  |   |  | BSP  |  |
             bindings = <
-  DE_F1  DE_F2  DE_F3  DE_F4  DE_F5    DE_F8      DE_F9     DE_F10          DE_F11  DE_F10 DE_F12
+  DE_F1  DE_F2  DE_F3  DE_F4  DE_F5    DE_F8      DE_F9     DE_F10          DE_F11  DE_F12
   DE_F6  DE_F7  ___  ___  ___    &mark_word  &mark_line  &kp PRINTSCREEN  ___   ___
   ___  ___  ___  ___  ___    &email      ___      ___           ___   ___
                   ___  ___  ___    ___      ___      ___
