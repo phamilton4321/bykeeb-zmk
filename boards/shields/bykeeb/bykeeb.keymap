@@ -7,7 +7,7 @@
 #define DEFAULT 0
 #define SYM     1
 #define NAV     2
-#define FNS    3
+#define FNS     3
 
 / {
     macros {
@@ -82,37 +82,37 @@
 
         layer_0 {
             bindings = <
-  DE_Z  DE_Y       &kp U             &kp A               &kp Q          &kp P        &kp B            &kp M        &kp L       &kp F
-  &kp C  &hm LALT S  &hs LSHFT I       &hm LEFT_CONTROL E  &kp O          &kp D        &hm RCTRL T      &hs RSHFT N  &hm RALT R  &hm RWIN H
-  &kp V  &kp X       DE_UDIA       DE_ADIA         DE_ODIA    &kp W        &kp G            &kp COMMA    &kp DOT     &kp K
-                     &kp HOME          &kp ENTER           &lt NAV SPACE  &lt SYM SPACE  &lt FNS BACKSPACE  &kp END
+  DE_Z  DE_Y        DE_U           DE_A                DE_Q       DE_P        DE_B            DE_M         DE_L        DE_F
+  DE_C  &hm LALT S  &hs LSHFT I    &hm LEFT_CONTROL E  DE_O       DE_D        &hm RCTRL T     &hs RSHFT N  &hm RALT R  &hm RWIN H
+  DE_V  DE_X        DE_UDIA        DE_ADIA             DE_ODIA    DE_W        DE_G            DE_COMM      DE_DOT      DE_K
+                     DE_HOME          DE_RET   &lt NAV SPACE        &lt SYM SPACE  &lt FNS BACKSPACE  DE_END
             >;
         };
 
         symbols {
             bindings = <
-  &trans             DE_NDSH       DE_LBRC            DE_RBRC       DE_CARET    DE_EXCL       DE_LABK     DE_RABK       DE_EQL           DE_AMPR
-  DE_BSLS        DE_SLSH       DE_LCBR           DE_RCBR        DE_ASTR    DE_QUES       DE_LPRN     DE_RPRN        DE_MINS         DE_COLN
-  DE_HASH           DE_DLR        DE_PIPE           DE_TILD        DE_GRV       DE_PLUS          DE_PERC     DE_DQUO       DE_QUOT          DE_SCLN
-                                       &trans                 &trans            &trans          &trans            &trans          &kp TAB
+  ___            DE_MINS       DE_LBRC           DE_RBRC        DE_CARET    DE_EXCL       DE_LABK     DE_RABK       DE_EQL          DE_AMPR
+  DE_BSLS        DE_SLSH       DE_LCBR           DE_RCBR        DE_ASTR     DE_QUES       DE_LPRN     DE_RPRN       DE_MINS         DE_COLN
+  DE_HASH        DE_DLR        DE_PIPE           DE_TILD        DE_GRV      DE_PLUS       DE_PERC     DE_DQUO       DE_QUOT         DE_SCLN
+                                       ___                 ___            ___          ___            ___          DE_TAB
             >;
         };
 
         nav_numbers {
             bindings = <
-  &kp PG_UP  &kp BSPC  &kp UP    &kp DEL    &kp PG_DN    &kp MINUS       &kp N7    &kp N8  &kp N9  &kp STAR
-  &kp HOME   &kp LEFT  &kp DOWN  &kp RIGHT  &kp END      DE_EURO     &kp N4    &kp N5  &kp N6  &kp PLUS
-  &kp ESC    &kp TAB   &kp INS   &kp RET    &trans       DE_COLN     &kp N1    &kp N2  &kp N3  &kp COMMA
-                       &trans    &trans     &trans       &kp N0          &kp BSPC  &trans
+  DE_PG_UP   DE_BSPC  DE_UP    DE_DEL    DE_PG_DN    DE_MINS      DE_7    DE_8  DE_9  DE_ASTR
+  DE_HOME    DE_LEFT  DE_DOWN  DE_RIGHT  DE_END      DE_EURO      DE_4    DE_5  DE_6  DE_PLUS
+  &kp ESC    DE_TAB   &kp INS  DE_RET    ___         DE_COLN      DE_1    DE_2  DE_3  DE_COMM
+                       ___    ___     ___       DE_0          &kp BSPC  ___
             >;
         };
 
         fn_specials {
             bindings = <
-  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5    &kp F8      &kp F9      &kp F10          &kp F11  &kp F10 F12
-  &kp F6  &kp F7  &trans  &trans  &trans    &mark_word  &mark_line  &kp PRINTSCREEN  &trans   &trans
-  &trans  &trans  &trans  &trans  &trans    &email      &trans      &trans           &trans   &trans
-                  &trans  &trans  &trans    &trans      &trans      &trans
+  DE_F1  DE_F2  DE_F3  DE_F4  DE_F5    DE_F8      DE_F9     DE_F10          DE_F11  DE_F10 DE_F12
+  DE_F6  DE_F7  ___  ___  ___    &mark_word  &mark_line  &kp PRINTSCREEN  ___   ___
+  ___  ___  ___  ___  ___    &email      ___      ___           ___   ___
+                  ___  ___  ___    ___      ___      ___
             >;
         };
     };
