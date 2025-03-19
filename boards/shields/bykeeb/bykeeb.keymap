@@ -1,0 +1,113 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+/ {
+    macros {
+        mark_word: MarkWork {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp LEFT>,
+                <&macro_release>,
+                <&macro_press>,
+                <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,
+                <&kp RIGHT_ARROW>,
+                <&macro_release>;
+
+            label = "MARKWORK";
+        };
+
+        mark_line: mark_line {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp HOME>,
+                <&macro_release>,
+                <&macro_press>,
+                <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,
+                <&kp END>,
+                <&macro_release>;
+
+            label = "MARK_LINE";
+        };
+
+        email: email {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp T &kp H &kp O &kp M &kp A &kp S &kp DOT &kp M &kp A &kp N &kp G &kp AT &kp I &kp T &kp MINUS &kp K &kp R &kp U &kp E &kp G &kp E &kp R &kp DOT &kp D &kp E>;
+            label = "EMAIL";
+        };
+    };
+
+    behaviors {
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HomerowMods";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+        };
+
+        hs: homerow_shift {
+            compatible = "zmk,behavior-hold-tap";
+
+            label = "HomerowShift"
+             #
+
+            binding-cells = <2>;
+            tapping-term-ms = <175>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+        };
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        layer_0 {
+            bindings = <
+  &kp Z  &kp Y       &kp U             &kp A               &kp Q          &kp P        &kp B            &kp M        &kp L       &kp F
+  &kp C  &hm LALT S  &hs LSHFT I       &hm LEFT_CONTROL E  &kp O          &kp D        &hm RCTRL T      &hs RSHFT N  &hm RALT R  &hm RWIN H
+  &kp V  &kp X       &kp LEFT_BRACKET  &kp DQT             &kp SEMI       &kp W        &kp G            &kp COMMA    &kp DOT     &kp K
+                     &kp HOME          &kp ENTER           &lt 2 SPACE    &lt 1 SPACE  &lt 3 BACKSPACE  &kp END
+            >;
+        };
+
+        symbols {
+            bindings = <
+  &kp                &kp LS(MINUS)     &kp LA(LC(N8))         &kp LC(LA(N9))    &kp CARET       &kp LS(NUMBER_1)  &kp LESS_THAN  &kp GT            &kp LS(N0)           &kp LS(NUMBER_6)
+  &kp LC(LA(MINUS))  &kp LS(N7)        &kp LC(LA(N7))         &kp LC(LA(N0))    &kp ASTERISK    &kp LS(MINUS)     &kp LS(N8)     &kp LS(N9)        &kp KP_MINUS         &kp LS(DOT)
+  &kp HASH           &kp LS(NUMBER_4)  &kp LC(LA(LESS_THAN))  &kp LC(LA(PLUS))  &kp EQUAL       &kp PLUS          &kp LS(N5)     &kp LS(NUMBER_2)  &kp LS(NON_US_HASH)  &kp LS(COMMA)
+                                       &kp                    &kp               &kp             &kp               &kp            &kp TAB
+            >;
+        };
+
+        nuv_numbers {
+            bindings = <
+  &kp PG_UP  &kp BSPC  &kp UP    &kp DEL    &kp PG_DN    &kp MINUS       &kp N7    &kp N8  &kp N9  &kp STAR
+  &kp HOME   &kp LEFT  &kp DOWN  &kp RIGHT  &kp END      &kp LC(LA(E))   &kp N4    &kp N5  &kp N6  &kp PLUS
+  &kp ESC    &kp TAB   &kp INS   &kp RET    &trans       &kp LS(PERIOD)  &kp N1    &kp N2  &kp N3  &kp COMMA
+                       &trans    &trans     &trans       &kp N0          &kp BSPC  &trans
+            >;
+        };
+
+        fn_specials {
+            bindings = <
+  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5    &kp F8      &kp F9      &kp F10          &kp F11  &kp F10 F12
+  &kp F6  &kp F7  &trans  &trans  &trans    &mark_word  &mark_line  &kp PRINTSCREEN  &trans   &trans
+  &trans  &trans  &trans  &trans  &trans    &email      &trans      &trans           &trans   &trans
+                  &trans  &trans  &trans    &trans      &trans      &trans
+            >;
+        };
+    };
+};
