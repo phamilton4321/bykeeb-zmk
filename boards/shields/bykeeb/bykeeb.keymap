@@ -1,5 +1,10 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include "keymap_german_mac_iso_zmk.h"
+#define DEFAULT 0
+#define SYM     1
+#define NAV     2
+#define FUNC    3
 
 / {
     macros {
@@ -78,25 +83,25 @@
             bindings = <
   &kp Z  &kp Y       &kp U             &kp A               &kp Q          &kp P        &kp B            &kp M        &kp L       &kp F
   &kp C  &hm LALT S  &hs LSHFT I       &hm LEFT_CONTROL E  &kp O          &kp D        &hm RCTRL T      &hs RSHFT N  &hm RALT R  &hm RWIN H
-  &kp V  &kp X       &kp LEFT_BRACKET  &kp DQT             &kp SEMI       &kp W        &kp G            &kp COMMA    &kp DOT     &kp K
-                     &kp HOME          &kp ENTER           &lt 2 SPACE    &lt 1 SPACE  &lt 3 BACKSPACE  &kp END
+  &kp V  &kp X       &kp DE_UDIA       &kp DE_ADIA         &kp DE_ODIA    &kp W        &kp G            &kp COMMA    &kp DOT     &kp K
+                     &kp HOME          &kp ENTER           &lt NAV SPACE    &lt SYM SPACE  &lt FUNC BACKSPACE  &kp END
             >;
         };
 
         symbols {
             bindings = <
-  &kp                &kp LS(MINUS)     &kp LA(LC(N8))         &kp LC(LA(N9))    &kp CARET       &kp LS(NUMBER_1)  &kp LESS_THAN  &kp GT            &kp LS(N0)           &kp LS(NUMBER_6)
-  &kp LC(LA(MINUS))  &kp LS(N7)        &kp LC(LA(N7))         &kp LC(LA(N0))    &kp ASTERISK    &kp LS(MINUS)     &kp LS(N8)     &kp LS(N9)        &kp KP_MINUS         &kp LS(DOT)
-  &kp HASH           &kp LS(NUMBER_4)  &kp LC(LA(LESS_THAN))  &kp LC(LA(PLUS))  &kp EQUAL       &kp PLUS          &kp LS(N5)     &kp LS(NUMBER_2)  &kp LS(NON_US_HASH)  &kp LS(COMMA)
-                                       &kp                    &kp               &kp             &kp               &kp            &kp TAB
+  &trans             &kp DE_NDSH       &kp DE_LBRC            &kp DE_RBRC       &kp DE_CARET    &kp DE_EXCL       &kp DE_LABK     &kp DE_RABK       &kp DE_EQL           &kp DE_AMPR
+  &kp DE_BSLS        &kp DE_SLSH       &kp DE_LCBR           &kp DE_RCBR        &kp ASTERISK    &kp DE_QUES       &kp DE_LPRN     &kp DE_RRN        &kp KP_MINUS         &kp DE_COLN
+  &kp HASH           &kp DE_DLR        &kp DE_PIPE           &kp DE_TILD        &kp DE_GRV      &kp PLUS          &kp DE_PERC     &kp DE_DQUO       &kp DE_QUOT          &kp DE_SCLN
+                                       &trans                 &trans            &trans          &trans            &trans          &kp TAB
             >;
         };
 
-        nuv_numbers {
+        nav_numbers {
             bindings = <
   &kp PG_UP  &kp BSPC  &kp UP    &kp DEL    &kp PG_DN    &kp MINUS       &kp N7    &kp N8  &kp N9  &kp STAR
   &kp HOME   &kp LEFT  &kp DOWN  &kp RIGHT  &kp END      &kp LC(LA(E))   &kp N4    &kp N5  &kp N6  &kp PLUS
-  &kp ESC    &kp TAB   &kp INS   &kp RET    &trans       &kp LS(PERIOD)  &kp N1    &kp N2  &kp N3  &kp COMMA
+  &kp ESC    &kp TAB   &kp INS   &kp RET    &trans       &kp DE_COLN     &kp N1    &kp N2  &kp N3  &kp COMMA
                        &trans    &trans     &trans       &kp N0          &kp BSPC  &trans
             >;
         };
