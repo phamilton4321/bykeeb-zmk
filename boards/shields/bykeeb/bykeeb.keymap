@@ -92,8 +92,8 @@
         symbols {
             bindings = <
   &trans             DE_NDSH       DE_LBRC            DE_RBRC       DE_CARET    DE_EXCL       DE_LABK     DE_RABK       DE_EQL           DE_AMPR
-  DE_BSLS        DE_SLSH       DE_LCBR           DE_RCBR        ASTERISK    DE_QUES       DE_LPRN     DE_RPRN        &kp KP_MINUS         DE_COLN
-  &kp HASH           DE_DLR        DE_PIPE           DE_TILD        DE_GRV      &kp PLUS          DE_PERC     DE_DQUO       DE_QUOT          DE_SCLN
+  DE_BSLS        DE_SLSH       DE_LCBR           DE_RCBR        DE_ASTR    DE_QUES       DE_LPRN     DE_RPRN        DE_MINS         DE_COLN
+  DE_HASH           DE_DLR        DE_PIPE           DE_TILD        DE_GRV       DE_PLUS          DE_PERC     DE_DQUO       DE_QUOT          DE_SCLN
                                        &trans                 &trans            &trans          &trans            &trans          &kp TAB
             >;
         };
