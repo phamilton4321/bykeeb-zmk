@@ -7,7 +7,7 @@
 #define DEFAULT 0
 #define SYM     1
 #define NAV     2
-#define FUNC    3
+#define FNS    3
 
 / {
     macros {
@@ -82,18 +82,18 @@
 
         layer_0 {
             bindings = <
-  &kp Z  &kp Y       &kp U             &kp A               &kp Q          &kp P        &kp B            &kp M        &kp L       &kp F
+  DE_Z  DE_Y       &kp U             &kp A               &kp Q          &kp P        &kp B            &kp M        &kp L       &kp F
   &kp C  &hm LALT S  &hs LSHFT I       &hm LEFT_CONTROL E  &kp O          &kp D        &hm RCTRL T      &hs RSHFT N  &hm RALT R  &hm RWIN H
-  &kp V  &kp X       &kp DE_UDIA       &kp DE_ADIA         &kp DE_ODIA    &kp W        &kp G            &kp COMMA    &kp DOT     &kp K
-                     &kp HOME          &kp ENTER           &lt NAV SPACE    &lt SYM SPACE  &lt FUNC BACKSPACE  &kp END
+  &kp V  &kp X       DE_UDIA       DE_ADIA         DE_ODIA    &kp W        &kp G            &kp COMMA    &kp DOT     &kp K
+                     &kp HOME          &kp ENTER           &lt NAV SPACE  &lt SYM SPACE  &lt FNS BACKSPACE  &kp END
             >;
         };
 
         symbols {
             bindings = <
-  &trans             &kp DE_NDSH       &kp DE_LBRC            &kp DE_RBRC       &kp DE_CARET    &kp DE_EXCL       &kp DE_LABK     &kp DE_RABK       &kp DE_EQL           &kp DE_AMPR
-  &kp DE_BSLS        &kp DE_SLSH       &kp DE_LCBR           &kp DE_RCBR        &kp ASTERISK    &kp DE_QUES       &kp DE_LPRN     &kp DE_RPRN        &kp KP_MINUS         &kp DE_COLN
-  &kp HASH           &kp DE_DLR        &kp DE_PIPE           &kp DE_TILD        &kp DE_GRV      &kp PLUS          &kp DE_PERC     &kp DE_DQUO       &kp DE_QUOT          &kp DE_SCLN
+  &trans             DE_NDSH       DE_LBRC            DE_RBRC       DE_CARET    DE_EXCL       DE_LABK     DE_RABK       DE_EQL           DE_AMPR
+  DE_BSLS        DE_SLSH       DE_LCBR           DE_RCBR        ASTERISK    DE_QUES       DE_LPRN     DE_RPRN        &kp KP_MINUS         DE_COLN
+  &kp HASH           DE_DLR        DE_PIPE           DE_TILD        DE_GRV      &kp PLUS          DE_PERC     DE_DQUO       DE_QUOT          DE_SCLN
                                        &trans                 &trans            &trans          &trans            &trans          &kp TAB
             >;
         };
@@ -101,8 +101,8 @@
         nav_numbers {
             bindings = <
   &kp PG_UP  &kp BSPC  &kp UP    &kp DEL    &kp PG_DN    &kp MINUS       &kp N7    &kp N8  &kp N9  &kp STAR
-  &kp HOME   &kp LEFT  &kp DOWN  &kp RIGHT  &kp END      &kp LC(LA(E))   &kp N4    &kp N5  &kp N6  &kp PLUS
-  &kp ESC    &kp TAB   &kp INS   &kp RET    &trans       &kp DE_COLN     &kp N1    &kp N2  &kp N3  &kp COMMA
+  &kp HOME   &kp LEFT  &kp DOWN  &kp RIGHT  &kp END      DE_EURO     &kp N4    &kp N5  &kp N6  &kp PLUS
+  &kp ESC    &kp TAB   &kp INS   &kp RET    &trans       DE_COLN     &kp N1    &kp N2  &kp N3  &kp COMMA
                        &trans    &trans     &trans       &kp N0          &kp BSPC  &trans
             >;
         };
